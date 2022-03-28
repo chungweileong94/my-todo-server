@@ -1,12 +1,11 @@
 import 'reflect-metadata';
 import {buildSchema} from 'type-graphql';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import {resolvers} from '@generated/type-graphql';
 import {ApolloServer} from 'apollo-server';
+import {resolvers} from '@generated/type-graphql';
 
 import {context} from './context';
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 (async () => {
   const schema = await buildSchema({resolvers});
