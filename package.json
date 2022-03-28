@@ -8,7 +8,7 @@
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "rm -rf dist && tsc",
     "prisma-generate": "prisma generate",
-    "heroku-postbuild": "yarn prisma-generate"
+    "postinstall": "yarn prisma-generate"
   },
   "author": "",
   "license": "ISC",
