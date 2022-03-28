@@ -1,1 +1,1 @@
-web: yarn generate-prisma && node dist/index.js
+web: node dist/index.js
