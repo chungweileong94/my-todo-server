@@ -2,6 +2,12 @@
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
     "strict": true,
     "target": "ESNext",
     "module": "commonjs",
@@ -15,6 +21,9 @@
     "skipLibCheck": true
   },
   "ts-node": {
-    "swc": true
+    "swc": true,
+    "require": [
+      "tsconfig-paths/register"
+    ]
   }
 }
